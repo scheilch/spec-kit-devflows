@@ -1,0 +1,51 @@
+schema_version: "1.0"
+
+extension:
+  id: devflow
+  name: "Development Workflow Extensions"
+  version: "1.0.0"
+  description: "Five production-tested workflows for bugfix, modify, refactor, hotfix, and deprecate — covering the complete software development lifecycle beyond new features"
+  author: "MartyBonacci"
+  repository: "https://github.com/MartyBonacci/spec-kit-extensions"
+  license: "MIT"
+
+requires:
+  speckit_version: ">=0.4.0"
+  tools:
+    - name: git
+      required: true
+
+provides:
+  commands:
+    - name: speckit.devflow.bugfix
+      file: commands/speckit.devflow.bugfix.md
+      description: "Fix bugs with regression-test-first approach"
+    - name: speckit.devflow.modify
+      file: commands/speckit.devflow.modify.md
+      description: "Modify existing features with automatic impact analysis"
+    - name: speckit.devflow.refactor
+      file: commands/speckit.devflow.refactor.md
+      description: "Improve code quality with metrics tracking and behavior preservation"
+    - name: speckit.devflow.hotfix
+      file: commands/speckit.devflow.hotfix.md
+      description: "Handle production emergencies with expedited process and mandatory post-mortem"
+    - name: speckit.devflow.deprecate
+      file: commands/speckit.devflow.deprecate.md
+      description: "Sunset features with phased 3-step rollout (warnings → disabled → removed)"
+
+hooks:
+  after_constitution:
+    command: speckit.devflow.bugfix
+    optional: true
+    prompt: "Development workflow extensions are available. Use /speckit.devflow.bugfix, /speckit.devflow.modify, etc."
+    description: "Notify user about available development workflows after constitution setup"
+
+tags:
+  - "workflow"
+  - "bugfix"
+  - "modify"
+  - "refactor"
+  - "hotfix"
+  - "deprecate"
+  - "lifecycle"
+  - "sdlc"

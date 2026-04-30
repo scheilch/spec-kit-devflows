@@ -1,5 +1,8 @@
 ---
-description: Create an emergency hotfix workflow with expedited process and mandatory post-mortem.
+description: "Create an emergency hotfix workflow with expedited process and mandatory post-mortem."
+scripts:
+  sh: scripts/bash/create-hotfix.sh --json "{ARGS}"
+  ps: scripts/powershell/create-hotfix.ps1 -Json "{ARGS}"
 ---
 
 The user input to you can be provided directly by the agent or as a command argument - you **MUST** consider it before proceeding with the prompt (if not empty).
@@ -8,13 +11,13 @@ User input:
 
 $ARGUMENTS
 
-The text the user typed after `/speckit.hotfix` in the triggering message **is** the incident description. Assume you always have it available in this conversation even if `$ARGUMENTS` appears literally below. Do not ask the user to repeat it unless they provided an empty command.
+The text the user typed after `/speckit.devflow.hotfix` in the triggering message **is** the incident description. Assume you always have it available in this conversation even if `$ARGUMENTS` appears literally below. Do not ask the user to repeat it unless they provided an empty command.
 
 **⚠️  EMERGENCY WORKFLOW - EXPEDITED PROCESS ⚠️**
 
 Given that incident description, do this:
 
-1. Run the script `.specify/scripts/bash/create-hotfix.sh --json "$ARGUMENTS"` from repo root and parse its JSON output for HOTFIX_ID, BRANCH_NAME, HOTFIX_FILE, POSTMORTEM_FILE, and TIMESTAMP. All file paths must be absolute.
+1. Run the script `{SCRIPT}` from repo root and parse its JSON output for HOTFIX_ID, BRANCH_NAME, HOTFIX_FILE, POSTMORTEM_FILE, and TIMESTAMP. All file paths must be absolute.
   **IMPORTANT** You must only ever run this script once. The JSON is provided in the terminal as output - always refer to it to get the actual content you're looking for.
 
 2. Load `.specify/extensions/workflows/hotfix/hotfix-template.md` to understand required sections.
@@ -48,7 +51,7 @@ Given that incident description, do this:
 ⚠️ **Post-Deployment:**
 - Monitor production after deployment
 - Schedule post-mortem within 24-48 hours
-- Create follow-up `/speckit.bugfix` for proper fix with tests
+- Create follow-up `/speckit.devflow.bugfix` for proper fix with tests
 
 💡 **Note**: This is the ONLY workflow that permits test-after approach due to emergency
 ```

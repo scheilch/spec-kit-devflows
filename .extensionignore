@@ -1,0 +1,23 @@
+# .extensionignore
+# Files excluded from installation when using `specify extension add`
+
+# Development files
+.github/
+.specify/
+.vscode/
+.git/
+.gitignore
+
+# Documentation (user has README, rest is dev-only)
+docs/
+CONTRIBUTING.md
+EXAMPLES.md
+AI-AGENTS.md
+
+# Duplicate command files in workflow dirs (canonical copies are in commands/)
+extensions/workflows/bugfix/command.md
+
+# Temporary files
+_fork_ps1/
+*.tmp
+*.bak

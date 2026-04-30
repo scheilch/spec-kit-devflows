@@ -1,5 +1,8 @@
 ---
-description: Create a refactoring workflow with metrics tracking and behavior preservation validation.
+description: "Create a refactoring workflow with metrics tracking and behavior preservation validation."
+scripts:
+  sh: scripts/bash/create-refactor.sh --json "{ARGS}"
+  ps: scripts/powershell/create-refactor.ps1 -Json "{ARGS}"
 ---
 
 The user input to you can be provided directly by the agent or as a command argument - you **MUST** consider it before proceeding with the prompt (if not empty).
@@ -8,11 +11,11 @@ User input:
 
 $ARGUMENTS
 
-The text the user typed after `/speckit.refactor` in the triggering message **is** the refactoring description. Assume you always have it available in this conversation even if `$ARGUMENTS` appears literally below. Do not ask the user to repeat it unless they provided an empty command.
+The text the user typed after `/speckit.devflow.refactor` in the triggering message **is** the refactoring description. Assume you always have it available in this conversation even if `$ARGUMENTS` appears literally below. Do not ask the user to repeat it unless they provided an empty command.
 
 Given that refactoring description, do this:
 
-1. Run the script `.specify/scripts/bash/create-refactor.sh --json "$ARGUMENTS"` from repo root and parse its JSON output for REFACTOR_ID, BRANCH_NAME, REFACTOR_SPEC_FILE, METRICS_BEFORE, BEHAVIORAL_SNAPSHOT. All file paths must be absolute.
+1. Run the script `{SCRIPT}` from repo root and parse its JSON output for REFACTOR_ID, BRANCH_NAME, REFACTOR_SPEC_FILE, METRICS_BEFORE, BEHAVIORAL_SNAPSHOT. All file paths must be absolute.
   **IMPORTANT** You must only ever run this script once. The JSON is provided in the terminal as output - always refer to it to get the actual content you're looking for.
 
 2. Load `.specify/extensions/workflows/refactor/refactor-template.md` to understand required sections.

@@ -1,7 +1,8 @@
 ---
-description: Create a bug fix workflow with regression test and minimal documentation.
+description: "Create a bug fix workflow with regression test and minimal documentation."
 scripts:
   sh: scripts/bash/create-bugfix.sh --json "{ARGS}"
+  ps: scripts/powershell/create-bugfix.ps1 -Json "{ARGS}"
 ---
 
 The user input to you can be provided directly by the agent or as a command argument - you **MUST** consider it before proceeding with the prompt (if not empty).
@@ -10,7 +11,7 @@ User input:
 
 $ARGUMENTS
 
-The text the user typed after `/speckit.bugfix` in the triggering message **is** the bug description. Assume you always have it available in this conversation even if `$ARGUMENTS` appears literally below. Do not ask the user to repeat it unless they provided an empty command.
+The text the user typed after `/speckit.devflow.bugfix` in the triggering message **is** the bug description. Assume you always have it available in this conversation even if `$ARGUMENTS` appears literally below. Do not ask the user to repeat it unless they provided an empty command.
 
 Given that bug description, do this:
 

@@ -1,7 +1,8 @@
 ---
-description: Modify an existing feature with impact analysis and backward compatibility tracking.
+description: "Modify an existing feature with impact analysis and backward compatibility tracking."
 scripts:
   sh: scripts/bash/create-modification.sh --json "{ARGS}"
+  ps: scripts/powershell/create-modification.ps1 -Json "{ARGS}"
 ---
 
 The user input to you can be provided directly by the agent or as a command argument - you **MUST** consider it before proceeding with the prompt (if not empty).
@@ -10,9 +11,9 @@ User input:
 
 $ARGUMENTS
 
-The text the user typed after `/speckit.modify` in the triggering message can be:
-- `/speckit.modify <feature-number> "modification description"` - Direct with feature number
-- `/speckit.modify "modification description"` - Interactive (will prompt for feature selection)
+The text the user typed after `/speckit.devflow.modify` in the triggering message can be:
+- `/speckit.devflow.modify <feature-number> "modification description"` - Direct with feature number
+- `/speckit.devflow.modify "modification description"` - Interactive (will prompt for feature selection)
 
 Assume you always have it available in this conversation even if `$ARGUMENTS` appears literally below.
 
