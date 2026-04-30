@@ -14,10 +14,6 @@ CONTRIBUTING.md
 EXAMPLES.md
 AI-AGENTS.md
 
-# Duplicate command files in workflow dirs (canonical copies are in commands/)
-extensions/workflows/bugfix/command.md
-
 # Temporary files
-_fork_ps1/
 *.tmp
 *.bak
