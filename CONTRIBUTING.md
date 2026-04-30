@@ -1,4 +1,4 @@
-# Contributing to spec-kit-extensions
+# Contributing to spec-kit-devflows
 
 Thank you for your interest in contributing! These extensions were built by the community for the community, and we welcome all contributions.
 
@@ -6,7 +6,7 @@ Thank you for your interest in contributing! These extensions were built by the 
 
 ### 1. Report Bugs
 
-Found a bug? Please [open an issue](https://github.com/[your-username]/spec-kit-extensions/issues/new) with:
+Found a bug? Please [open an issue](https://github.com/scheilch/spec-kit-devflows/issues/new) with:
 
 - **Clear title**: "Bug: workflow_name - brief description"
 - **Steps to reproduce**: Exact commands and context
@@ -39,7 +39,7 @@ Error: "Feature directory not found"
 
 ### 2. Request Features
 
-Have an idea for a new workflow or improvement? [Start a discussion](https://github.com/[your-username]/spec-kit-extensions/discussions/new?category=ideas) with:
+Have an idea for a new workflow or improvement? [Start a discussion](https://github.com/scheilch/spec-kit-devflows/discussions/new?category=ideas) with:
 
 - **Use case**: What problem does this solve?
 - **Proposed solution**: How would it work?
@@ -82,7 +82,7 @@ Documentation improvements are always welcome:
 
 Using these workflows in production? Share your experience!
 
-1. [Start a discussion](https://github.com/[your-username]/spec-kit-extensions/discussions/new?category=show-and-tell)
+1. [Start a discussion](https://github.com/scheilch/spec-kit-devflows/discussions/new?category=show-and-tell)
 2. Include:
    - What workflow you used
    - What problem it solved
@@ -109,7 +109,7 @@ Want to contribute a new workflow (e.g., `/performance-audit`, `/security-review
 
 **Before writing code**:
 
-1. [Open a discussion](https://github.com/[your-username]/spec-kit-extensions/discussions/new?category=ideas) proposing the workflow
+1. [Open a discussion](https://github.com/scheilch/spec-kit-devflows/discussions/new?category=ideas) proposing the workflow
 2. Get feedback from maintainers
 3. Wait for approval before starting implementation
 
@@ -129,7 +129,7 @@ Want to contribute a new workflow (e.g., `/performance-audit`, `/security-review
 
 Improving existing workflows:
 
-1. [Open an issue](https://github.com/[your-username]/spec-kit-extensions/issues/new) describing the improvement
+1. [Open an issue](https://github.com/scheilch/spec-kit-devflows/issues/new) describing the improvement
 2. Explain why it's better than current approach
 3. Share examples where current approach falls short
 4. Wait for maintainer feedback
@@ -147,8 +147,8 @@ Improving existing workflows:
 
 ```bash
 # 1. Fork and clone
-git clone https://github.com/YOUR-USERNAME/spec-kit-extensions.git
-cd spec-kit-extensions
+git clone https://github.com/YOUR-USERNAME/spec-kit-devflows.git
+cd spec-kit-devflows
 
 # 2. Create a test project
 cd /tmp
@@ -157,9 +157,9 @@ cd test-project
 specify init .
 
 # 3. Install your local extensions
-cp -r ~/spec-kit-extensions/extensions/* .specify/extensions/
-cp ~/spec-kit-extensions/scripts/* .specify/scripts/bash/
-cp ~/spec-kit-extensions/commands/* .claude/commands/
+cp -r ~/spec-kit-devflows/extensions/* .specify/extensions/
+cp ~/spec-kit-devflows/scripts/* .specify/scripts/bash/
+cp ~/spec-kit-devflows/commands/* .claude/commands/
 
 # 4. Test workflows
 /bugfix "test bug"
@@ -328,11 +328,11 @@ Top contributors may be invited to become maintainers.
 
 ## Questions?
 
-- **General questions**: [Discussions](https://github.com/[your-username]/spec-kit-extensions/discussions)
-- **Bug reports**: [Issues](https://github.com/[your-username]/spec-kit-extensions/issues)
+- **General questions**: [Discussions](https://github.com/scheilch/spec-kit-devflows/discussions)
+- **Bug reports**: [Issues](https://github.com/scheilch/spec-kit-devflows/issues)
 - **Security issues**: Email [security@example.com]
 - **Direct contact**: [Maintainer contact info]
 
 ---
 
-Thank you for contributing to spec-kit-extensions! 🎉
+Thank you for contributing to spec-kit-devflows! 🎉

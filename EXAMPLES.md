@@ -472,4 +472,4 @@ Ready to try these workflows on your project?
 
 **Remember**: The checkpoint-based workflow gives you control at each phase. Review and adjust before implementing!
 
-**Questions?** [Open a discussion](https://github.com/[your-username]/spec-kit-extensions/discussions)
+**Questions?** [Open a discussion](https://github.com/scheilch/spec-kit-devflows/discussions)

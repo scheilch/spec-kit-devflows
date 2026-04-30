@@ -5,6 +5,26 @@ All notable changes to the Specify Extension System will be documented in this f
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.1.0] - 2026-04-30
+
+### 🔄 Changed
+
+- **Repository ownership** — Migrated from `MartyBonacci/spec-kit-extensions` to `scheilch/spec-kit-devflows`
+- **Installation URL** — Now uses GitHub source archive (`/archive/refs/tags/vX.Y.Z.zip`) instead of custom-built release assets
+- **extension.yml** — Updated `author` and `repository` fields to match new owner/repo
+
+### ✨ Added
+
+- **GitHub Actions release workflow** (`.github/workflows/release.yml`) — Creates a GitHub Release with auto-generated release notes on tag push (`v*`)
+- **Copilot attribution** — README now highlights that all workflows, templates, and prompts are optimized for GitHub Copilot
+
+### 📝 Updated Documentation
+
+- **README.md** — Fixed install URL, added Copilot callout
+- **INSTALLATION.md** — Corrected install command with proper owner/repo and version-pinned archive URL
+
+---
+
 ## [2.0.0] - 2025-10-08
 
 ### 🎯 Major Changes
@@ -159,5 +179,6 @@ specs/bugfix-001/
 
 ---
 
+[2.1.0]: https://github.com/scheilch/spec-kit-devflows/compare/v2.0.0...v2.1.0
 [2.0.0]: https://github.com/martybonacci/spec-kit-extensions/compare/v1.0.0...v2.0.0
 [1.0.0]: https://github.com/martybonacci/spec-kit-extensions/releases/tag/v1.0.0

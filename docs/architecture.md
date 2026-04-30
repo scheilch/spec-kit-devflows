@@ -1,10 +1,10 @@
 # Architecture
 
-This document explains how spec-kit-extensions work internally.
+This document explains how spec-kit-devflows work internally.
 
 ## Overview
 
-spec-kit-extensions add 5 new workflows to spec-kit by:
+spec-kit-devflows add 5 new workflows to spec-kit by:
 
 1. **Detecting workflow type** from git branch names
 2. **Loading appropriate templates** based on workflow
@@ -515,4 +515,4 @@ Potential enhancements:
 
 ---
 
-**Questions about architecture?** [Open a discussion](https://github.com/[your-username]/spec-kit-extensions/discussions)
+**Questions about architecture?** [Open a discussion](https://github.com/scheilch/spec-kit-devflows/discussions)

@@ -3,7 +3,7 @@ schema_version: "1.0"
 extension:
   id: devflow
   name: "Development Workflow Extensions"
-  version: "1.0.0"
+  version: "2.1.0"
   description: "Five production-tested workflows for bugfix, modify, refactor, hotfix, and deprecate — covering the complete software development lifecycle beyond new features"
   author: "scheilch"
   repository: "https://github.com/scheilch/spec-kit-devflows"

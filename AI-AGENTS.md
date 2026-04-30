@@ -1,10 +1,10 @@
 # AI Agent Compatibility Guide
 
-This guide provides detailed setup instructions for using spec-kit-extensions with different AI coding agents.
+This guide provides detailed setup instructions for using spec-kit-devflows with different AI coding agents.
 
 ## Why It Works Across Multiple Agents
 
-spec-kit-extensions are **agent-agnostic** by design:
+spec-kit-devflows are **agent-agnostic** by design:
 
 ```
 User Command (any agent)
@@ -44,7 +44,7 @@ Any AI Agent Reads & Implements
 
 **Setup Steps**:
 
-1. Install spec-kit-extensions per [INSTALLATION.md](INSTALLATION.md)
+1. Install spec-kit-devflows per [INSTALLATION.md](INSTALLATION.md)
 
 2. Verify commands are present:
    ```bash
@@ -84,7 +84,7 @@ Any AI Agent Reads & Implements
 
 **Setup Steps**:
 
-1. Install spec-kit-extensions per [INSTALLATION.md](INSTALLATION.md)
+1. Install spec-kit-devflows per [INSTALLATION.md](INSTALLATION.md)
 
 2. Create `.github/copilot-instructions.md`:
 
@@ -213,12 +213,12 @@ When implementing any workflow, read the constitution and follow the appropriate
 
 **Setup Steps**:
 
-1. Install spec-kit-extensions per [INSTALLATION.md](INSTALLATION.md)
+1. Install spec-kit-devflows per [INSTALLATION.md](INSTALLATION.md)
 
 2. Create or edit `.cursorrules`:
 
 ```
-# spec-kit-extensions Workflows
+# spec-kit-devflows Workflows
 
 ## Workflow Commands
 
@@ -348,14 +348,14 @@ When implementing workflows, read files in this order:
 
 **Setup Steps**:
 
-1. Install spec-kit-extensions per [INSTALLATION.md](INSTALLATION.md)
+1. Install spec-kit-devflows per [INSTALLATION.md](INSTALLATION.md)
 
 2. Configure Windsurf project rules:
 
    **File**: `.windsurf/rules.md` (or Windsurf settings)
 
 ```markdown
-# spec-kit-extensions Workflows
+# spec-kit-devflows Workflows
 
 ## Custom Commands
 
@@ -415,7 +415,7 @@ Similar to Cursor - use AI chat to invoke workflows
 
 **Setup Steps**:
 
-1. Install spec-kit-extensions per [INSTALLATION.md](INSTALLATION.md)
+1. Install spec-kit-devflows per [INSTALLATION.md](INSTALLATION.md)
 
 2. Install Gemini CLI (if not already):
    ```bash
@@ -503,7 +503,7 @@ codex "Implement bugfix in specs/bugfix-001-*/ following tasks.md"
 
 **Why choose**: Trying a new agent, or agent doesn't support custom commands
 
-**Setup**: Just install spec-kit-extensions
+**Setup**: Just install spec-kit-devflows
 
 **Usage**:
 
@@ -715,8 +715,8 @@ Check that:
 ## Getting Help
 
 - **Agent-specific issues**: Check agent's official documentation
-- **Workflow issues**: [Open an issue](https://github.com/[your-username]/spec-kit-extensions/issues)
-- **General questions**: [Start a discussion](https://github.com/[your-username]/spec-kit-extensions/discussions)
+- **Workflow issues**: [Open an issue](https://github.com/scheilch/spec-kit-devflows/issues)
+- **General questions**: [Start a discussion](https://github.com/scheilch/spec-kit-devflows/discussions)
 
 ---
 
