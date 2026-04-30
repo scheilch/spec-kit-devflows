@@ -9,7 +9,8 @@
 ## Install
 
 ```bash
-specify extension add --from https://github.com/MartyBonacci/spec-kit-extensions/archive/refs/tags/v1.0.0.zip devflow
+# Replace v1.0.0 with the desired version tag
+specify extension add --from https://github.com/scheilch/spec-kit-devflows/archive/refs/tags/v1.0.0.zip devflow
 ```
 
 ## Verify
@@ -57,10 +58,10 @@ specify extension remove devflow
 For local development and testing:
 
 ```bash
-git clone https://github.com/MartyBonacci/spec-kit-extensions.git
-cd spec-kit-extensions
+git clone https://github.com/scheilch/spec-kit-devflows.git
+cd spec-kit-devflows
 
 # Install in dev mode (symlink)
 cd /path/to/your-project
-specify extension add --dev /path/to/spec-kit-extensions
+specify extension add --dev /path/to/spec-kit-devflows
 ```

@@ -1,0 +1,28 @@
+name: Release Extension
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Read extension version
+        id: ext_version
+        run: |
+          version=$(grep -m1 '^ *version:' extension.yml | sed 's/.*version: *"\?\([^"]*\)"\?/\1/')
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          name: "Workflow Extensions v${{ steps.ext_version.outputs.version }}"
+          generate_release_notes: true

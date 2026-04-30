@@ -5,8 +5,8 @@ extension:
   name: "Development Workflow Extensions"
   version: "1.0.0"
   description: "Five production-tested workflows for bugfix, modify, refactor, hotfix, and deprecate — covering the complete software development lifecycle beyond new features"
-  author: "MartyBonacci"
-  repository: "https://github.com/MartyBonacci/spec-kit-extensions"
+  author: "scheilch"
+  repository: "https://github.com/scheilch/spec-kit-devflows"
   license: "MIT"
 
 requires:

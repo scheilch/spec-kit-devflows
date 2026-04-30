@@ -2,6 +2,8 @@
 
 A [Spec Kit](https://github.com/github/spec-kit) extension that adds five production-tested development workflows — bugfix, modify, refactor, hotfix, and deprecate — covering the complete software development lifecycle beyond new features.
 
+> **Built for GitHub Copilot** — All workflow commands, templates, and prompts are optimized for use with GitHub Copilot as the AI agent. The structured markdown templates and command definitions are designed to give Copilot the context it needs to guide you through each workflow step effectively.
+
 ## Problem
 
 Spec Kit provides excellent structured workflows for building new features (`/speckit.specify` -> `/speckit.plan` -> `/speckit.tasks` -> `/speckit.implement`). But the remaining ~75% of development work happens ad-hoc:
@@ -27,7 +29,8 @@ Five workflows that bring spec-kit's structured approach to all development acti
 ## Installation
 
 ```bash
-specify extension add --from https://github.com/MartyBonacci/spec-kit-extensions/archive/refs/tags/v1.0.0.zip devflow
+# Replace v1.0.0 with the desired version tag
+specify extension add --from https://github.com/scheilch/spec-kit-devflows/archive/refs/tags/v1.0.0.zip devflow
 ```
 
 After installation, the extension is available at `.specify/extensions/devflow/`.
