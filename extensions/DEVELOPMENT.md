@@ -8,7 +8,7 @@ The extension system allows you to create specialized workflows that extend Spec
 
 1. **Bash script** - Automates workflow initialization (branch creation, file setup)
 2. **Templates** - Markdown templates for documentation (spec, tasks, etc.)
-3. **Claude command** - Integration with Claude Code via slash commands
+3. **Command definition** - Slash command prompt file (installed by `specify extension add` based on `--integration`)
 4. **Optional scripts** - Helper scripts for analysis, metrics, scanning, etc.
 
 ## Extension Structure
@@ -32,8 +32,8 @@ The extension system allows you to create specialized workflows that extend Spec
 ```
 
 ```
-.claude/commands/
-└── your-workflow.md            # Claude Code command definition
+commands/
+└── your-workflow.md            # Agent command definition (deployed by specify)
 ```
 
 ## Creating a New Workflow
@@ -58,7 +58,7 @@ mkdir -p .specify/extensions/workflows/your-workflow
 mkdir -p .specify/scripts/bash
 
 # Create command directory (if doesn't exist)
-mkdir -p .claude/commands
+mkdir -p commands
 ```
 
 ### Step 3: Write the Main Template
@@ -299,9 +299,9 @@ chmod +x .specify/scripts/bash/create-your-workflow.sh
 - Return all paths as absolute
 - Set environment variable for tracking
 
-### Step 6: Create the Claude Command
+### Step 6: Create the Command Definition
 
-Create `.claude/commands/your-workflow.md`:
+Create `commands/your-workflow.md`:
 
 ```markdown
 ---
@@ -400,9 +400,9 @@ Verify:
 - Files created in right location
 - Placeholders replaced
 
-2. **Test Claude command**:
+2. **Test command**:
 ```
-/your-workflow "test description"
+/speckit.devflow.your-workflow "test description"
 ```
 
 Verify:
@@ -564,13 +564,13 @@ sed -i.bak "s/###/${NUM}/g" file 2>/dev/null || \
 sed -i '' "s/###/${NUM}/g" file 2>/dev/null || true
 ```
 
-### Claude command doesn't appear
+### Command doesn't appear
 
 Ensure:
-1. File is in `.claude/commands/`
+1. File is in `commands/` directory of the extension
 2. File has `.md` extension
 3. Frontmatter has `description` field
-4. Claude Code reloaded (restart if needed)
+4. Extension is installed via `specify extension add` (deploys commands to agent-specific location)
 
 ### Workflow enabled but not working
 
@@ -602,9 +602,8 @@ See the built-in workflows for reference:
 ## Resources
 
 - [Specify Documentation](https://github.com/github/spec-kit)
-- [Extension README](.specify/extensions/README.md)
-- [Project Constitution](.specify/memory/constitution.md)
-- [Claude Code Docs](https://docs.claude.com/claude-code)
+- [Extension README](extensions/README.md)
+- [AI Agent Compatibility](AI-AGENTS.md)
 
 ---
 

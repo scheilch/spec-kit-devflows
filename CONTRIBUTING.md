@@ -33,7 +33,7 @@ Error: "Feature directory not found"
 
 ### Environment
 - spec-kit: v0.0.30
-- Claude Code: v1.2.0
+- AI agent: (name and version)
 - macOS: 14.1
 ```
 
@@ -119,7 +119,7 @@ Want to contribute a new workflow (e.g., `/performance-audit`, `/security-review
 2. Create:
    - Workflow template files
    - Bash creation script
-   - Command definition (for Claude Code)
+   - Command definition
    - Tasks template
    - README for the workflow
 3. Test on real project
@@ -159,7 +159,7 @@ specify init .
 # 3. Install your local extensions
 cp -r ~/spec-kit-devflows/extensions/* .specify/extensions/
 cp ~/spec-kit-devflows/scripts/* .specify/scripts/bash/
-cp ~/spec-kit-devflows/commands/* .claude/commands/
+cp ~/spec-kit-devflows/commands/* .specify/commands/
 
 # 4. Test workflows
 /bugfix "test bug"

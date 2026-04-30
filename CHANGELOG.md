@@ -136,7 +136,7 @@ specs/bugfix-001/
 - **5 workflow READMEs** - All updated with checkpoint-based workflow sections
 - **extensions/README.md** - Updated command names and architecture description
 - **Main documentation** - README.md, QUICKSTART.md, EXAMPLES.md all reflect checkpoint workflow
-- **Command files** - All `.claude/commands/speckit.*.md` files updated with checkpoint instructions
+- **Command files** - All command definitions updated with checkpoint instructions
 
 ### 🎓 Lessons Learned
 

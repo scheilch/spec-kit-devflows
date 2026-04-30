@@ -7,7 +7,7 @@ Templates Requiring Updates:
 - plan-template.md: ✅ Constitution Check section references all principles
 - spec-template.md: ✅ Compatible with current structure
 - tasks-template.md: ✅ Supports all workflow task categories
-- CLAUDE.md: ✅ Already references constitution authority
+- Agent config: ✅ Already references constitution authority
 - Extension workflows: ✅ All 5 new workflows comply with existing principles
 Follow-up TODOs: None
 Amendment Rationale: Added support for 5 new workflow types (bugfix, modify, refactor, hotfix, deprecate) to extend specification-first development to all software lifecycle activities.
@@ -120,7 +120,7 @@ The wrong workflow SHALL NOT be used - features must not bypass specification, b
 - Every public API MUST have inline documentation
 - Complex algorithms MUST include explanation comments
 - README MUST be updated for user-facing changes
-- CLAUDE.md MUST reflect architectural decisions
+- Agent configuration MUST reflect architectural decisions
 
 ## Governance
 

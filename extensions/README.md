@@ -33,7 +33,7 @@ Extensions are enabled by default in this project. To disable an extension, edit
 
 Each workflow extension contains:
 - **Template files** - Markdown templates for specs and documentation
-- **Command definition** - `.claude/commands/speckit.{workflow}.md` for AI agents
+- **Command definition** - `commands/speckit.devflow.{workflow}.md` for AI agents
 - **Bash scripts** - `.specify/scripts/bash/create-{workflow}.sh` for automation
 - **Checkpoint workflow** - Multi-phase approach with review points (plan → tasks → implement)
 
@@ -44,7 +44,7 @@ See `docs/extension-development.md` for guide on creating your own workflow exte
 ## Compatibility
 
 These extensions are designed to be:
-- **Agent-agnostic** - Work with Claude Code, GitHub Copilot, Gemini CLI, etc.
+- **Agent-agnostic** - Work with any AI agent supported by spec-kit (Copilot, Claude, Cursor, etc.)
 - **Non-breaking** - Don't modify core Specify functionality
 - **Spec Kit compatible** - Follow GitHub Spec Kit conventions for future contribution
 

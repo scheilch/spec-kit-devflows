@@ -229,9 +229,9 @@ These gates are enforced by task templates and workflow scripts.
 
 ### 8. Integration with `/implement`
 
-**File**: `.claude/commands/implement.md`
+**File**: `commands/speckit.devflow.implement.md` (or equivalent agent command)
 
-The `/implement` command detects workflow type and loads appropriate files:
+The `/speckit.implement` command detects workflow type and loads appropriate files:
 
 ```markdown
 ## Workflow Detection
@@ -267,11 +267,11 @@ You will receive JSON from check-prerequisites.sh containing WORKFLOW_TYPE.
 ### Example: `/bugfix` Workflow
 
 ```
-User runs: /bugfix "form crashes without image"
+User runs: /speckit.devflow.bugfix "form crashes without image"
     ↓
-SlashCommand tool invokes: .claude/commands/bugfix.md
+Agent invokes: commands/speckit.devflow.bugfix.md
     ↓
-Command calls: .specify/scripts/bash/create-bugfix.sh
+Command calls: scripts/bash/create-bugfix.sh
     ↓
 Script performs:
     1. Generates branch: bugfix/001-form-crashes
@@ -308,7 +308,7 @@ AI follows tasks enforcing quality gates:
 Extensions don't modify core spec-kit:
 - ✅ Separate directory (`.specify/extensions/`)
 - ✅ Separate scripts (`create-*.sh` not `setup-*.sh`)
-- ✅ Separate commands (`.claude/commands/` is optional)
+- ✅ Separate commands (`commands/` deployed by `specify extension add`)
 - ✅ Can be removed without breaking features
 
 ### 2. Convention Over Configuration
@@ -323,7 +323,7 @@ Workflow type determined by branch name:
 Works with any AI agent that supports spec-kit:
 - ✅ Bash scripts are universal
 - ✅ Markdown templates are readable by all agents
-- ✅ Claude Code commands are optional enhancement
+- ✅ Agent-specific command deployment handled by `specify extension add --integration`
 
 ### 4. Progressive Disclosure
 
@@ -363,9 +363,9 @@ To add a new workflow (e.g., `/performance-audit`):
    .specify/scripts/bash/create-performance-audit.sh
    ```
 
-5. **Add command** (for Claude Code):
+5. **Add command definition**:
    ```markdown
-   .claude/commands/performance.md
+   commands/speckit.devflow.performance.md
    ```
 
 6. **Add quality gates** to constitution:
