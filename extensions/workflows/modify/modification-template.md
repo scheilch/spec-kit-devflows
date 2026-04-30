@@ -13,6 +13,7 @@ User description: "$ARGUMENTS"
 [Business justification - new requirement, user feedback, technical improvement, bug pattern, compliance need, etc.]
 
 ## What's Changing?
+[NEEDS CLARIFICATION: Mark any requirement that is ambiguous or has multiple valid interpretations]
 
 ### Added
 - [New functionality 1 - describe what's being added]
@@ -137,7 +138,8 @@ If Yes, explain impact:
 
 - [ ] **Specification-First**: Modification spec complete before coding
 - [ ] **Minimal Complexity**: No unnecessary features added beyond requirement
-- [ ] **TDD**: Tests updated/added before implementation
+- [ ] **Simplicity Check**: Modification is the minimum change needed — no "while we're here" improvements
+- [ ] **TDD**: Tests updated/added BEFORE implementation (test-first, not test-after)
 - [ ] **Progressive Enhancement**: Builds on stable foundation
 - [ ] **Clear Boundaries**: Maintains separation of concerns
 
@@ -146,6 +148,12 @@ If Yes, explain impact:
 
 ## Testing Strategy
 *Filled during /speckit.plan*
+
+### Test-First Requirement
+⚠️ **Tests MUST be written/updated BEFORE implementing the modification.**
+1. Write/update tests that describe the NEW expected behavior (they will fail)
+2. Implement the modification until tests pass
+3. Verify no existing tests broke
 
 ### Existing Tests
 - [ ] Run full original feature test suite

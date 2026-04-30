@@ -27,8 +27,8 @@ Five workflows that bring spec-kit's structured approach to all development acti
 ## Installation
 
 ```bash
-# Replace v2.1.0 with the desired version tag
-specify extension add --from https://github.com/scheilch/spec-kit-devflows/archive/refs/tags/v2.1.0.zip devflow
+# Replace v2.1.1 with the desired version tag
+specify extension add --from https://github.com/scheilch/spec-kit-devflows/archive/refs/tags/v2.1.1.zip devflow
 ```
 
 After installation, the extension is available at `.specify/extensions/devflow/`.

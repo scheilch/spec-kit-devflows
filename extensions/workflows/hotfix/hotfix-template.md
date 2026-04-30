@@ -27,6 +27,7 @@ User description: "$ARGUMENTS"
 
 **Change Summary**:
 [1-2 sentences describing the code change made]
+[NEEDS CLARIFICATION: If root cause is uncertain, mark assumptions explicitly — do NOT guess]
 
 **Commit SHA**: [git commit hash]
 

@@ -9,8 +9,8 @@
 ## Install
 
 ```bash
-# Replace v2.1.0 with the desired version tag
-specify extension add --from https://github.com/scheilch/spec-kit-devflows/archive/refs/tags/v2.1.0.zip devflow
+# Replace v2.1.1 with the desired version tag
+specify extension add --from https://github.com/scheilch/spec-kit-devflows/archive/refs/tags/v2.1.1.zip devflow
 ```
 
 ## Verify
@@ -24,7 +24,7 @@ Expected output:
 ```text
 Installed Extensions:
 
-  ✓ Development Workflow Extensions (v2.1.0)
+  ✓ Development Workflow Extensions (v2.1.1)
     Five production-tested workflows for bugfix, modify, refactor, hotfix, and deprecate
     Commands: 5 | Status: Enabled
 ```

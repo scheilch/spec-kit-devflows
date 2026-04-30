@@ -5,6 +5,20 @@ All notable changes to the Specify Extension System will be documented in this f
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.1.1] - 2026-05-01
+
+### 🛡️ Workflow Quality Hardening
+
+Systematic audit of all 5 workflow templates against spec-kit SDD principles and known AI agent weaknesses. Fixes 4 identified gaps:
+
+- **`[NEEDS CLARIFICATION]` markers** — All 5 templates now instruct agents to mark uncertain/ambiguous details instead of guessing (bugfix, modify, refactor, hotfix, deprecate)
+- **Rollback Plan** — Added to bugfix template (was missing; hotfix/refactor already had one)
+- **Simplicity Gate** — Bugfix and modify templates now include a "Simplicity Check" checklist preventing over-engineered fixes
+- **Test-First enforcement** — Modify template now explicitly requires tests BEFORE implementation (was implicit)
+- **Test guidance for removal** — Deprecate Phase 3 now requires removal tests before deleting code
+
+---
+
 ## [2.1.0] - 2026-04-30
 
 ### 🔄 Changed
@@ -179,6 +193,7 @@ specs/bugfix-001/
 
 ---
 
+[2.1.1]: https://github.com/scheilch/spec-kit-devflows/compare/v2.1.0...v2.1.1
 [2.1.0]: https://github.com/scheilch/spec-kit-devflows/compare/v2.0.0...v2.1.0
 [2.0.0]: https://github.com/martybonacci/spec-kit-extensions/compare/v1.0.0...v2.0.0
 [1.0.0]: https://github.com/martybonacci/spec-kit-extensions/releases/tag/v1.0.0

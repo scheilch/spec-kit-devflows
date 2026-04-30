@@ -28,6 +28,7 @@ User description: "$ARGUMENTS"
 - [File1.ts lines XX-YY: duplicated logic in 3 places]
 - [File2.tsx lines AA-BB: 200-line function doing too much]
 - [Service.ts: direct database access instead of using repository]
+[NEEDS CLARIFICATION: If code smells are assumed but not verified with metrics, mark them here]
 
 ### Business/Technical Justification
 [Why is this refactoring needed NOW?]

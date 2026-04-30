@@ -17,6 +17,7 @@
 
 ### Why Deprecate?
 [Explain the business/technical reasons for deprecation]
+[NEEDS CLARIFICATION: If usage data is unavailable or incomplete, mark it — do NOT estimate without data]
 - [ ] Feature no longer aligns with product vision
 - [ ] Replaced by better alternative
 - [ ] Low/no usage
@@ -247,9 +248,10 @@ Link: <[migration guide URL]>; rel="deprecation"
 ### Phase 3 Testing
 - [ ] All code removed cleanly
 - [ ] No broken imports
-- [ ] All tests pass
+- [ ] All tests pass (run FULL suite after each removal step)
 - [ ] No console errors
 - [ ] Dependent features still work
+- [ ] Removal tests written BEFORE deleting code (verify imports, routes, APIs are gone)
 
 ## Documentation Updates
 
